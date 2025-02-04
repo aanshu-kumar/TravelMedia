@@ -15,15 +15,15 @@ const PostCard = ({ post }) => {
   }, []);
 
   return (
-    <div className=" w-[23%] bg-white p-4 flex flex-col items-center rounded-2xl">
+    <div className=" w-[90%] md:w-[48%] lg:w-[30%] bg-white p-4 flex flex-col items-center rounded-2xl">
       <img
         src={url}
         className="w-full h-2/3 object-cover hover:scale-95 duration-300 rounded-lg drop-shadow-lg"
       />
       <div className="w-full my-3">
         <h3 className="text-left font-semibold">{post.title.slice(0, 20)}</h3>
-        <div className="w-full flex flex-row items-center gap-2">
-          <p className="w-[78%] text-sm text-gray-400">
+        <div className="w-full flex flex-col lg:flex-row items-end lg:items-center gap-2">
+          <p className="mt-5 lg:w-[78%] text-sm text-gray-400">
             { more ?  post.body : post.body.slice(0, 100)}{" "}
             <span className="text-orange-500" onClick={()=>{
               setMore(!more)
@@ -32,7 +32,7 @@ const PostCard = ({ post }) => {
           </p>
           
           <div
-            className=" cursor-pointer w-1/5 hover:bg-orange-300 duration-300 bg-orange-400 p-2 flex justify-center items-center rounded-xl shadow-orange-500 shadow-md"
+            className=" cursor-pointer lg:w-1/5 hover:bg-orange-300 duration-300 bg-orange-400 p-2 flex justify-center items-center rounded-xl shadow-orange-500 shadow-md"
             onClick={()=>{
               dispatch(setImage(url))
               navigate(`/item/${post.id}`)

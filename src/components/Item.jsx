@@ -34,14 +34,14 @@ const Item = () => {
             />
           </svg>
         </div>
-        <h2 className="text-3xl font-semibold">Post Number #{id}</h2>
+        <h2 className="text-3xl font-semibold text-center">Post Number #{id}</h2>
       </div>
-      <div className="relative min-h-72 mx-5 mt-5 w-full flex gap-10">
+      <div className="relative min-h-72 lg:mx-5 mt-5 w-full flex lg:flex-row flex-col gap-10">
         <img
           src={img}
-          className="w-1/4 object-cover duration-300 rounded-lg drop-shadow-lg "
+          className="w-full lg:w-1/4 object-cover duration-300 rounded-lg drop-shadow-lg "
         />
-        <div className="px-4 absolute bottom-2 text-wrap w-1/4 text-white flex justify-between">
+        <div className="px-4 absolute top-4 lg:bottom-4 text-wrap w-full lg:w-1/4 text-white flex justify-between">
           <p>
             {post.length > 0
               ? post[0].title.slice(0, 20)
@@ -76,8 +76,8 @@ const Item = () => {
             </svg>
           </div>
         </div>
-        <div className="w-[70%] h-40">
-          <div>
+        <div className="w-full lg:w-[70%] h-40">
+          <div className="flex justify-center lg:justify-start">
             <button
               className={`cursor-pointer px-8 py-2 ${
                 active === "details"
@@ -101,9 +101,7 @@ const Item = () => {
             <p className="mt-10">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis voluptatibus asperiores vitae sint? Dignissimos, voluptatum beatae. Quo laborum, possimus saepe accusantium quis assumenda, deleniti nemo eligendi similique repellendus architecto blanditiis.
               Culpa sed suscipit perspiciatis facere sequi cumque excepturi. Cumque veritatis est culpa tempora fuga et autem voluptate iure. Et vel ea consectetur magnam, animi illum dolorum quam in adipisci quasi.
-              Ab culpa aperiam nemo deserunt voluptatum vitae, quibusdam distinctio iste qui explicabo enim quia sequi fugit deleniti dolorem nisi consectetur blanditiis animi! Ex dolore aperiam exercitationem qui tempore? Possimus, quo!
-              Unde praesentium eos magnam ullam neque dolorem, omnis beatae quidem, aut eaque sunt. Laborum laudantium magnam maiores unde. Impedit mollitia modi delectus, maxime voluptas voluptatem ducimus? Quidem quisquam perspiciatis non!
-              Deleniti molestiae adipisci et, est aspernatur, libero iusto cumque voluptates facilis veritatis veniam minima, nobis expedita ducimus illo doloribus quos. Voluptatem impedit beatae quisquam nam minus minima aut consequuntur veritatis?
+              nobis expedita ducimus illo doloribus quos. Voluptatem impedit beatae quisquam nam minus minima aut consequuntur veritatis?
             </p>
           ) : (
             ""
@@ -115,7 +113,7 @@ const Item = () => {
           )}
         </div>
       </div>
-      <p className="text-3xl mt-10 mb-5 ml-5 font-bold">More Posts</p>
+      <p className="text-3xl mt-60 lg:mt-10 mb-5 ml-5 font-bold">More Posts</p>
       <Posts filteredData={filteredData} loading={false} />
     </div>
   );

@@ -19,9 +19,9 @@ const Home = () => {
   }, [posts]);
 
   return (
-    <div className="w-11/12 mx-auto mt-10">
+    <div className="w-full lg:w-11/12 mx-auto mt-10">
       <div className="w-full">
-        <h2 className="text-3xl font-semibold">Social Media for Travellers</h2>
+        <h2 className="text-lg lg:text-3xl text-center font-semibold">Social Media for Travellers</h2>
         <div className="w-full flex flex-row bg-white p-2 gap-2 mt-4 rounded-xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"

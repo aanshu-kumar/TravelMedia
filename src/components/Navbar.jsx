@@ -17,10 +17,10 @@ useEffect(()=>{
 },[location.pathname])
 
   return (
-    <div className="w-full h-20 bg-orange-500 shadow-md shadow-orange-300">
-        <div className="w-3/5 flex flex-row justify-between items-center h-full mx-5">
+    <div className="w-full py-3 bg-orange-500 shadow-md shadow-orange-300">
+        <div className="lg:w-3/5 mx-auto gap-4 md:gap-0 w-full flex flex-col lg:flex-row  md:justify-between items-center h-full lg:mx-5">
           <h1 className="text-white text-xl font-semibold ">TravelMedia.in</h1>
-          <div className="bg-white py-4 px-10  rounded-4xl flex gap-16">
+          <div className="bg-white py-4 px-10  rounded-4xl flex gap-10 md:gap-16">
             <div className="flex flex-col items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
