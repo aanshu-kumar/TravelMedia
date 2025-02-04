@@ -98,7 +98,7 @@ const Item = () => {
             </button>
           </div>
           {active == "details" ? (
-            <p className="mt-10">
+            <p className="mt-10 text-justify">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis voluptatibus asperiores vitae sint? Dignissimos, voluptatum beatae. Quo laborum, possimus saepe accusantium quis assumenda, deleniti nemo eligendi similique repellendus architecto blanditiis.
               Culpa sed suscipit perspiciatis facere sequi cumque excepturi. Cumque veritatis est culpa tempora fuga et autem voluptate iure. Et vel ea consectetur magnam, animi illum dolorum quam in adipisci quasi.
               nobis expedita ducimus illo doloribus quos. Voluptatem impedit beatae quisquam nam minus minima aut consequuntur veritatis?
@@ -113,7 +113,7 @@ const Item = () => {
           )}
         </div>
       </div>
-      <p className="text-3xl mt-60 lg:mt-10 mb-5 ml-5 font-bold">More Posts</p>
+      <p className="text-3xl mt-70 lg:mt-10 mb-5 ml-5 font-bold">More Posts</p>
       <Posts filteredData={filteredData} loading={false} />
     </div>
   );
